@@ -51,5 +51,11 @@ int main(){
 ## Compile tests
 
 To compile `test.c` run:
+- `gcc -D_LOG_COLOR_ENABLED -D_NO_LOGGING *.c -o test` for no logging but colored tests (prefered)
 - `gcc -D_LOG_COLOR_ENABLED *.c -o test` for colored logging
 - `gcc -D_NO_LOGGING *.c -o test` for no logging
+
+## Limitations
+
+Cannot parse unicode characters.
+The key and string objects use `char*`, and therefore cannot hold unicode data.
